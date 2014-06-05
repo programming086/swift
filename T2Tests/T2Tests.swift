@@ -2,7 +2,7 @@
 //  T2Tests.swift
 //  T2Tests
 //
-//  Created by Brovko Roman on 05.06.14.
+//  Created by Brovko Roman on 04.06.14.
 //  Copyright (c) 2014 AshberrySoft. All rights reserved.
 //
 

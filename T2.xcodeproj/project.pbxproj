@@ -13,6 +13,8 @@
 		2118BA4C19407E4D006FECBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2118BA4A19407E4D006FECBA /* Main.storyboard */; };
 		2118BA4E19407E4D006FECBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2118BA4D19407E4D006FECBA /* Images.xcassets */; };
 		2118BA5A19407E4D006FECBA /* T2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2118BA5919407E4D006FECBA /* T2Tests.swift */; };
+		2118BA6619407E6C006FECBA /* CustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2118BA6519407E6C006FECBA /* CustomObject.m */; };
+		2118BA6819407EBE006FECBA /* MySwiftObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2118BA6719407EBE006FECBA /* MySwiftObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,10 @@
 		2118BA5319407E4D006FECBA /* T2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = T2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2118BA5819407E4D006FECBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2118BA5919407E4D006FECBA /* T2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = T2Tests.swift; sourceTree = "<group>"; };
+		2118BA6319407E6B006FECBA /* T2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "T2-Bridging-Header.h"; sourceTree = "<group>"; };
+		2118BA6419407E6C006FECBA /* CustomObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomObject.h; sourceTree = "<group>"; };
+		2118BA6519407E6C006FECBA /* CustomObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomObject.m; sourceTree = "<group>"; };
+		2118BA6719407EBE006FECBA /* MySwiftObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySwiftObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,10 @@
 				2118BA4D19407E4D006FECBA /* Images.xcassets */,
 				2118BA4519407E4D006FECBA /* T2.xcdatamodeld */,
 				2118BA4119407E4D006FECBA /* Supporting Files */,
+				2118BA6419407E6C006FECBA /* CustomObject.h */,
+				2118BA6519407E6C006FECBA /* CustomObject.m */,
+				2118BA6319407E6B006FECBA /* T2-Bridging-Header.h */,
+				2118BA6719407EBE006FECBA /* MySwiftObject.swift */,
 			);
 			path = T2;
 			sourceTree = "<group>";
@@ -213,7 +223,9 @@
 			files = (
 				2118BA4919407E4D006FECBA /* ViewController.swift in Sources */,
 				2118BA4419407E4D006FECBA /* AppDelegate.swift in Sources */,
+				2118BA6819407EBE006FECBA /* MySwiftObject.swift in Sources */,
 				2118BA4719407E4D006FECBA /* T2.xcdatamodeld in Sources */,
+				2118BA6619407E6C006FECBA /* CustomObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,9 +341,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = T2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "T2/T2-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -340,9 +356,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = T2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "T2/T2-Bridging-Header.h";
 			};
 			name = Release;
 		};

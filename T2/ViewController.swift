@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  T2
 //
-//  Created by Brovko Roman on 05.06.14.
+//  Created by Brovko Roman on 04.06.14.
 //  Copyright (c) 2014 AshberrySoft. All rights reserved.
 //
 
@@ -21,5 +21,13 @@ class ViewController: UIViewController {
     }
 
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        // MY TEST
+        var instanceCustomObject: CustomObject = CustomObject()
+        instanceCustomObject.someProperty = "Hello world"
+        println(instanceCustomObject.someProperty)
+        instanceCustomObject.someMethod()
+    }
 }
 
