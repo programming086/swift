@@ -24,10 +24,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         // MY TEST
-        var instanceCustomObject: CustomObject = CustomObject()
-        instanceCustomObject.someProperty = "Hello world"
-        println(instanceCustomObject.someProperty)
-        instanceCustomObject.someMethod()
+        SwiftObject().test()
     }
 }
 
